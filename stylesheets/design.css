@@ -1,0 +1,110 @@
+/* line 4, ../scss/design.scss */
+html {
+  background-color: #dfdfdf;
+}
+
+/* line 7, ../scss/design.scss */
+body {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 13, ../scss/design.scss */
+section img {
+  width: 100%;
+}
+@media (min-width: 700px) {
+  /* line 13, ../scss/design.scss */
+  section img {
+    float: left;
+    width: 80%;
+  }
+}
+@media (min-width: 1000px) {
+  /* line 13, ../scss/design.scss */
+  section img {
+    width: 50%;
+  }
+}
+/* line 26, ../scss/design.scss */
+section .content {
+  float: left;
+  width: 100%;
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+@media (min-width: 1000px) {
+  /* line 26, ../scss/design.scss */
+  section .content {
+    width: calc(50% - 2 * 2em);
+    padding: 0 2em;
+    margin-top: 0;
+  }
+}
+
+/* line 41, ../scss/design.scss */
+h1 {
+  color: #71717b;
+  margin-top: 0;
+  font-size: 1.9em;
+  font-weight: 500;
+}
+
+/* line 49, ../scss/design.scss */
+.questionTitle {
+  font-size: 2em;
+  color: #b10014;
+}
+
+/* line 54, ../scss/design.scss */
+.questionBody {
+  font-size: 1.7em;
+}
+
+/* line 58, ../scss/design.scss */
+.button {
+  width: 100%;
+  font-size: 2em;
+  color: #fcffff;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  cursor: pointer;
+  background: #adadad;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #adadad 0%, #818181 50%, #adadad 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #adadad), color-stop(50%, #818181), color-stop(100%, #adadad));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #adadad 0%, #818181 50%, #adadad 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #adadad 0%, #818181 50%, #adadad 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #adadad 0%, #818181 50%, #adadad 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #adadad 0%, #818181 50%, #adadad 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#adadad',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 77, ../scss/design.scss */
+.button:hover {
+  background: #269800;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #269800 0%, #48c001 50%, #269800 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #269800), color-stop(50%, #48c001), color-stop(100%, #269800));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #269800 0%, #48c001 50%, #269800 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #269800 0%, #48c001 50%, #269800 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #269800 0%, #48c001 50%, #269800 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #269800 0%, #48c001 50%, #269800 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#269800', endColorstr='#269800',GradientType=0 );
+  /* IE6-9 */
+}
