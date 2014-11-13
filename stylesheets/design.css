@@ -1,28 +1,28 @@
-/* line 7, ../scss/design.scss */
+/* line 5, ../scss/design.scss */
 html {
   background-color: #dfdfdf;
 }
 
-/* line 10, ../scss/design.scss */
+/* line 8, ../scss/design.scss */
 body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   font-size: 10px;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 10, ../scss/design.scss */
+@media (min-width: 768px) {
+  /* line 8, ../scss/design.scss */
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
-/* line 21, ../scss/design.scss */
+/* line 19, ../scss/design.scss */
 section img {
   width: 50%;
   float: left;
 }
-/* line 35, ../scss/design.scss */
+/* line 33, ../scss/design.scss */
 section h1 {
   width: calc(50% - 1.3em);
   padding-left: 1.3em;
@@ -33,33 +33,33 @@ section h1 {
   font-weight: 500;
 }
 @media (min-width: 1030px) {
-  /* line 35, ../scss/design.scss */
+  /* line 33, ../scss/design.scss */
   section h1 {
     font-size: 2em;
   }
 }
-/* line 49, ../scss/design.scss */
+/* line 47, ../scss/design.scss */
 section .contentBody {
   width: 100%;
   float: right;
   margin-top: 1em;
   font-size: 1.2em;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 49, ../scss/design.scss */
+@media (min-width: 768px) {
+  /* line 47, ../scss/design.scss */
   section .contentBody {
     width: calc(50% - 1.3em);
     padding-left: 1.3em;
     margin: 0;
   }
 }
-/* line 62, ../scss/design.scss */
+/* line 60, ../scss/design.scss */
 section .contentQuestion {
   width: 100%;
   float: left;
 }
 @media (min-width: 1030px) {
-  /* line 62, ../scss/design.scss */
+  /* line 60, ../scss/design.scss */
   section .contentQuestion {
     float: left;
     width: 50%;
@@ -69,18 +69,18 @@ section .contentQuestion {
   }
 }
 
-/* line 78, ../scss/design.scss */
+/* line 76, ../scss/design.scss */
 .questionTitle {
   font-size: 1.5em;
   color: #b10014;
 }
 
-/* line 83, ../scss/design.scss */
+/* line 81, ../scss/design.scss */
 .questionBody {
   font-size: 1.3em;
 }
 
-/* line 87, ../scss/design.scss */
+/* line 85, ../scss/design.scss */
 .button {
   width: 100%;
   font-size: 1.8em;
@@ -107,7 +107,7 @@ section .contentQuestion {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#adadad',GradientType=0 );
   /* IE6-9 */
 }
-/* line 106, ../scss/design.scss */
+/* line 104, ../scss/design.scss */
 .button:hover {
   background: #269800;
   /* Old browsers */
