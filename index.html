@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Piki Project</title>
+    <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="stylesheets/design.css">
 </head>
 <body ng-app="piki">
@@ -11,16 +12,16 @@
     <section ng-show="question.number === 1">
         <img src="images/Desert.jpg" alt="first image"/>
 
-        <div class="content"><h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
+        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
+        <div class="contentBody">
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
 
-            <div><p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
 
-                <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+            <p>impsum Lorem impsum Lorem impsum</p>
+        </div>
 
-                <p>impsum Lorem impsum Lorem impsum</p>
-            </div>
-
-            <span class="questionTitle">Question 1:</span> <span class="questionBody">Are you sure?</span>
+        <div class="contentQuestion"><span class="questionTitle">Question 1:</span> <span class="questionBody">Are you sure?</span>
             <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
             <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
     </section>
