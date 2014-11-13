@@ -10,7 +10,7 @@ body{
   margin-right:auto;
   font-size:10px;
 
-  @media (min-width: $tablet-screen) {
+  @media (min-device-width: $tablet-screen) {
     font-size:18px;
   }
 }
@@ -38,7 +38,7 @@ section{
       font-size:1.7em;
       font-weight: 500;
 
-    @media (min-width: $wide-screen) {
+    @media (min-device-width: $wide-screen) {
       font-size:2em;
     }
   }
@@ -49,7 +49,7 @@ section{
     margin-top: 1em;
     font-size:1.2em;
 
-    @media (min-width: $tablet-screen) {
+    @media (min-device-width: $tablet-screen) {
       width: calc(50% - 1.3em);
       padding-left:1.3em;
       margin: 0;
@@ -60,7 +60,7 @@ section{
     width:100%;
     float:left;
 
-    @media (min-width: $wide-screen) {
+    @media (min-device-width: $wide-screen) {
       float:left;
       width:50%;
       //    width: calc(50% - 1.3em);

@@ -10,7 +10,7 @@ body {
   margin-right: auto;
   font-size: 10px;
 }
-@media (min-width: 768px) {
+@media (min-device-width: 768px) {
   /* line 7, ../scss/design.scss */
   body {
     font-size: 18px;
@@ -32,7 +32,7 @@ section h1 {
   font-size: 1.7em;
   font-weight: 500;
 }
-@media (min-width: 1024px) {
+@media (min-device-width: 1024px) {
   /* line 32, ../scss/design.scss */
   section h1 {
     font-size: 2em;
@@ -45,7 +45,7 @@ section .contentBody {
   margin-top: 1em;
   font-size: 1.2em;
 }
-@media (min-width: 768px) {
+@media (min-device-width: 768px) {
   /* line 46, ../scss/design.scss */
   section .contentBody {
     width: calc(50% - 1.3em);
@@ -58,7 +58,7 @@ section .contentQuestion {
   width: 100%;
   float: left;
 }
-@media (min-width: 1024px) {
+@media (min-device-width: 1024px) {
   /* line 59, ../scss/design.scss */
   section .contentQuestion {
     float: left;
