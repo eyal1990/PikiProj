@@ -55,20 +55,20 @@ section{
       margin: 0;
     }
   }
-}
 
-.contentQuestion{
-  width:100%;
-  float:left;
-
-  @media (min-width: $wide-screen) {
+  .contentQuestion{
+    width:100%;
     float:left;
-    width:50%;
-//    width: calc(50% - 1.3em);
-//    padding-left:1.3em;
-    margin-left:25%;
-    margin-right:25%;
-    margin-top:1em;
+
+    @media (min-width: $wide-screen) {
+      float:left;
+      width:50%;
+      //    width: calc(50% - 1.3em);
+      //    padding-left:1.3em;
+      margin-left:25%;
+      margin-right:25%;
+      margin-top:1em;
+    }
   }
 }
 

@@ -8,64 +8,82 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 10px;
+}
+@media (min-width: 768px) {
+  /* line 7, ../scss/design.scss */
+  body {
+    font-size: 18px;
+  }
 }
 
-/* line 13, ../scss/design.scss */
+/* line 18, ../scss/design.scss */
 section img {
-  width: 100%;
-}
-@media (min-width: 700px) {
-  /* line 13, ../scss/design.scss */
-  section img {
-    float: left;
-    width: 80%;
-  }
-}
-@media (min-width: 1000px) {
-  /* line 13, ../scss/design.scss */
-  section img {
-    width: 50%;
-  }
-}
-/* line 26, ../scss/design.scss */
-section .content {
+  width: 50%;
   float: left;
+}
+/* line 32, ../scss/design.scss */
+section h1 {
+  width: calc(50% - 1.3em);
+  padding-left: 1.3em;
+  float: right;
+  color: #71717b;
+  margin: 0;
+  font-size: 1.7em;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  /* line 32, ../scss/design.scss */
+  section h1 {
+    font-size: 2em;
+  }
+}
+/* line 46, ../scss/design.scss */
+section .contentBody {
   width: 100%;
+  float: right;
   margin-top: 1em;
   font-size: 1.2em;
 }
-@media (min-width: 1000px) {
-  /* line 26, ../scss/design.scss */
-  section .content {
-    width: calc(50% - 2 * 2em);
-    padding: 0 2em;
-    margin-top: 0;
+@media (min-width: 768px) {
+  /* line 46, ../scss/design.scss */
+  section .contentBody {
+    width: calc(50% - 1.3em);
+    padding-left: 1.3em;
+    margin: 0;
+  }
+}
+/* line 59, ../scss/design.scss */
+section .contentQuestion {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 1024px) {
+  /* line 59, ../scss/design.scss */
+  section .contentQuestion {
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1em;
   }
 }
 
-/* line 41, ../scss/design.scss */
-h1 {
-  color: #71717b;
-  margin-top: 0;
-  font-size: 1.9em;
-  font-weight: 500;
-}
-
-/* line 49, ../scss/design.scss */
+/* line 75, ../scss/design.scss */
 .questionTitle {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #b10014;
 }
 
-/* line 54, ../scss/design.scss */
+/* line 80, ../scss/design.scss */
 .questionBody {
-  font-size: 1.7em;
+  font-size: 1.3em;
 }
 
-/* line 58, ../scss/design.scss */
+/* line 84, ../scss/design.scss */
 .button {
   width: 100%;
-  font-size: 2em;
+  font-size: 1.8em;
   color: #fcffff;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -89,7 +107,7 @@ h1 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#adadad',GradientType=0 );
   /* IE6-9 */
 }
-/* line 77, ../scss/design.scss */
+/* line 103, ../scss/design.scss */
 .button:hover {
   background: #269800;
   /* Old browsers */
