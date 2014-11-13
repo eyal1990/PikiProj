@@ -16,29 +16,29 @@ body {
     font-size: 17px;
   }
 }
+@media (min-width: 1030px) {
+  /* line 8, ../scss/design.scss */
+  body {
+    font-size: 20px;
+  }
+}
 
-/* line 19, ../scss/design.scss */
+/* line 23, ../scss/design.scss */
 section img {
   width: 50%;
   float: left;
 }
-/* line 33, ../scss/design.scss */
+/* line 37, ../scss/design.scss */
 section h1 {
-  width: calc(50% - 1.3em);
-  padding-left: 1.3em;
+  width: calc(50% - 0.8em);
+  padding-left: 0.8em;
   float: right;
   color: #71717b;
   margin: 0;
   font-size: 1.7em;
   font-weight: 500;
 }
-@media (min-width: 1030px) {
-  /* line 33, ../scss/design.scss */
-  section h1 {
-    font-size: 2em;
-  }
-}
-/* line 47, ../scss/design.scss */
+/* line 48, ../scss/design.scss */
 section .contentBody {
   width: 100%;
   float: right;
@@ -46,20 +46,20 @@ section .contentBody {
   font-size: 1.2em;
 }
 @media (min-width: 768px) {
-  /* line 47, ../scss/design.scss */
+  /* line 48, ../scss/design.scss */
   section .contentBody {
-    width: calc(50% - 1.3em);
-    padding-left: 1.3em;
+    width: calc(50% - 0.8em);
+    padding-left: 0.8em;
     margin: 0;
   }
 }
-/* line 60, ../scss/design.scss */
+/* line 61, ../scss/design.scss */
 section .contentQuestion {
   width: 100%;
   float: left;
 }
 @media (min-width: 1030px) {
-  /* line 60, ../scss/design.scss */
+  /* line 61, ../scss/design.scss */
   section .contentQuestion {
     float: left;
     width: 50%;
@@ -69,18 +69,18 @@ section .contentQuestion {
   }
 }
 
-/* line 76, ../scss/design.scss */
+/* line 77, ../scss/design.scss */
 .questionTitle {
   font-size: 1.5em;
   color: #b10014;
 }
 
-/* line 81, ../scss/design.scss */
+/* line 82, ../scss/design.scss */
 .questionBody {
   font-size: 1.3em;
 }
 
-/* line 85, ../scss/design.scss */
+/* line 86, ../scss/design.scss */
 .button {
   width: 100%;
   font-size: 1.8em;
@@ -107,7 +107,7 @@ section .contentQuestion {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#adadad',GradientType=0 );
   /* IE6-9 */
 }
-/* line 104, ../scss/design.scss */
+/* line 105, ../scss/design.scss */
 .button:hover {
   background: #269800;
   /* Old browsers */

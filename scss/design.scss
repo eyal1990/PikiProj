@@ -14,6 +14,10 @@ body{
   @include breakpoint($tablet-screen){
     font-size:17px;
   }
+
+  @include breakpoint($wide-screen){
+    font-size:20px;
+  }
 }
 section{
   img{
@@ -29,19 +33,16 @@ section{
 //      width:50%;
 //    }
   }
-
+$paddingLeftFromImage: 0.8em;
   h1{
-      width: calc(50% - 1.3em);
-      padding-left:1.3em;
+      width: calc(50% - #{$paddingLeftFromImage});
+      padding-left:$paddingLeftFromImage;
       float:right;
       color: rgb(113,113,123);
       margin: 0;
       font-size:1.7em;
       font-weight: 500;
 
-   @include breakpoint($wide-screen) {
-      font-size:2em;
-    }
   }
 
   .contentBody{
@@ -51,8 +52,8 @@ section{
     font-size:1.2em;
 
     @include breakpoint($tablet-screen){
-      width: calc(50% - 1.3em);
-      padding-left:1.3em;
+      width: calc(50% - #{$paddingLeftFromImage});
+      padding-left:$paddingLeftFromImage;
       margin: 0;
     }
   }
