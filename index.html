@@ -3,90 +3,78 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Piki Project</title>
+    <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="stylesheets/design.css">
 </head>
 <body ng-app="piki">
 
 <div ng-controller="questionCtrl as question">
-    <section ng-if="question.number === 1">
+    <section ng-show="question.number === 1">
         <img src="images/Desert.jpg" alt="first image"/>
 
-        <div class="content"><h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
+        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
+        <div class="contentBody">
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
 
-            <div><p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
 
-                <p>Lorem <timer interval="65"></timer> impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
-
-                <p>impsum Lorem impsum Lorem impsum</p>
-            </div>
-
-            <div ng-controller="listCtrl as list">
-                <progressbar ng-model="percentages"></progressbar>
-
-                <ul class="vi-list">
-                    <li ng-show="percentages > 25" class="sample-show-hide">aaaaa</li>
-                    <li ng-show="percentages > 50" class="sample-show-hide">bbbbb</li>
-                    <li ng-show="percentages > 75" class="sample-show-hide">cccccc</li>
-                    <li ng-show="percentages > 99" class="sample-show-hide">dddddd</li>
-                </ul>
-            </div>
-
-            <span class="questionTitle">Question 1:</span> <span class="questionBody">Are you sure?</span>
-            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
-            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
-    </section>
-    <section ng-if="question.number === 2">
-        <img src="images/Koala.jpg" alt="second image"/>
-
-        <div class="content"><h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
-
-            <div><p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
-
-                <p>Lorem impsum <timer interval="65"></timer> Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
-
-                <p>impsum Lorem impsum Lorem impsum</p>
-            </div>
-
-            <span class="questionTitle">Question 2:</span> <span class="questionBody">Are you sure?</span>
-            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
-            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
-    </section>
-    <section ng-if="question.number === 3">
-        <img src="images/Penguins.jpg" alt="third image"/>
-
-        <div class="content"><h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
-
-            <div><p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
-
-                <p>Lorem impsum <timer interval="65"></timer> Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
-
-                <p>impsum Lorem impsum Lorem impsum</p>
-            </div>
-
-            <span class="questionTitle">Question 3:</span> <span class="questionBody">Are you sure?</span>
-            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
-            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
-    </section>
-    <section ng-if="question.number === 4">
-        <img src="images/Tulips.jpg" alt="fourth image"/>
-
-        <div class="content"><h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
-
-            <div class="text"><p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
-
-                <p>Lorem impsum <timer interval="65"></timer> Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
-
-                <p>impsum Lorem impsum Lorem impsum</p>
-            </div>
-
-            <span class="questionTitle">Question 4:</span> <span class="questionBody">Are you sure?</span>
-            <a href="https://google.com"><input class="button" type="button" value="Yes"/></a>
-            <a href="https://google.com"><input class="button" type="button" value="No"/></a>
+            <p>impsum Lorem impsum Lorem impsum</p>
         </div>
+
+        <div class="contentQuestion"><span class="questionTitle">Question 1:</span> <span class="questionBody">Are you sure?</span>
+            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
+            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
+    </section>
+    <section ng-show="question.number === 2">
+        <img src="images/smush-Koala.jpg" alt="second image"/>
+
+        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
+        <div class="contentBody">
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+
+            <p>impsum Lorem impsum Lorem impsum</p>
+        </div>
+
+        <div class="contentQuestion"><span class="questionTitle">Question 2:</span> <span class="questionBody">Are you sure?</span>
+            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
+            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
+    </section>
+    <section ng-show="question.number === 3">
+        <img src="images/smush-Penguins.jpg" alt="third image"/>
+
+        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
+        <div class="contentBody">
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+
+            <p>impsum Lorem impsum Lorem impsum</p>
+        </div>
+
+        <div class="contentQuestion"><span class="questionTitle">Question 3:</span> <span class="questionBody">Are you sure?</span>
+            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
+            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
+    </section>
+    <section ng-show="question.number === 4">
+        <img src="images/smush-Tulips.jpg" alt="fourth image"/>
+
+        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
+        <div class="contentBody">
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+
+            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+
+            <p>impsum Lorem impsum Lorem impsum</p>
+        </div>
+
+        <div class="contentQuestion"><span class="questionTitle">Question 4:</span> <span class="questionBody">Are you sure?</span>
+            <a href="http://www.google.com"><input class="button" type="button" value="Yes"/></a>
+            <a href="http://www.google.com"><input class="button" type="button" value="No"/></a></div>
     </section>
 </div>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.min.js"></script>
     <script src="js/piki.js"></script>
 </body>
 </html>
