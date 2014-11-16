@@ -16,7 +16,7 @@ body {
     font-size: 17px;
   }
 }
-@media (min-width: 1030px) {
+@media (min-width: 1024px) {
   /* line 8, ../scss/design.scss */
   body {
     font-size: 20px;
@@ -38,49 +38,56 @@ section h1 {
   font-size: 1.7em;
   font-weight: 500;
 }
-/* line 48, ../scss/design.scss */
+@media (min-width: 1024px) {
+  /* line 37, ../scss/design.scss */
+  section h1 {
+    float: left;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+/* line 54, ../scss/design.scss */
 section .contentBody {
   width: 100%;
   float: right;
   margin-top: 1em;
   font-size: 1.2em;
 }
-@media (min-width: 768px) {
-  /* line 48, ../scss/design.scss */
-  section .contentBody {
-    width: calc(50% - 0.8em);
-    padding-left: 0.8em;
-    margin: 0;
-  }
-}
-/* line 61, ../scss/design.scss */
+/* line 67, ../scss/design.scss */
 section .contentQuestion {
   width: 100%;
   float: left;
 }
-@media (min-width: 1030px) {
-  /* line 61, ../scss/design.scss */
+@media (min-width: 1024px) {
+  /* line 67, ../scss/design.scss */
   section .contentQuestion {
     float: left;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 1em;
+    width: 100%;
+    padding-left: 0;
   }
 }
 
-/* line 77, ../scss/design.scss */
+/* line 83, ../scss/design.scss */
 .questionTitle {
   font-size: 1.5em;
   color: #b10014;
 }
 
-/* line 82, ../scss/design.scss */
+/* line 88, ../scss/design.scss */
 .questionBody {
   font-size: 1.3em;
 }
 
-/* line 86, ../scss/design.scss */
+@media (min-width: 1024px) {
+  /* line 92, ../scss/design.scss */
+  .allExceptImage {
+    float: right;
+    width: calc(50% - 1.3em);
+    padding-left: 1.3em;
+  }
+}
+
+/* line 100, ../scss/design.scss */
 .button {
   width: 100%;
   font-size: 1.8em;
@@ -90,6 +97,8 @@ section .contentQuestion {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   cursor: pointer;
+  border-radius: 10px;
+  outline: none;
   background: #adadad;
   /* Old browsers */
   background: -moz-linear-gradient(top, #adadad 0%, #818181 50%, #adadad 100%);
@@ -107,7 +116,7 @@ section .contentQuestion {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#adadad',GradientType=0 );
   /* IE6-9 */
 }
-/* line 105, ../scss/design.scss */
+/* line 121, ../scss/design.scss */
 .button:hover {
   background: #269800;
   /* Old browsers */
@@ -125,4 +134,108 @@ section .contentQuestion {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#269800', endColorstr='#269800',GradientType=0 );
   /* IE6-9 */
+}
+
+/* line 133, ../scss/design.scss */
+#outer {
+  width: 70%;
+  border: 2px solid black;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* line 140, ../scss/design.scss */
+#inner {
+  transition: width 1s ease;
+  width: 0%;
+  background-color: #23F018;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* line 148, ../scss/design.scss */
+.listContainer {
+  width: 100%;
+  float: left;
+}
+
+/* line 153, ../scss/design.scss */
+.sample-show-hide {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+/* line 158, ../scss/design.scss */
+.sample-show-hide.ng-hide {
+  opacity: 0;
+}
+
+/* line 162, ../scss/design.scss */
+.vi-list {
+  list-style-image: url("../images/checkmark.png");
+}
+
+/* line 166, ../scss/design.scss */
+.vi-item {
+  color: #636363;
+  margin-bottom: 4px;
+}
+
+/* line 172, ../scss/design.scss */
+.progressBarMessage {
+  font-size: 1.5em;
+  color: #bf0000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 179, ../scss/design.scss */
+.progressBarMessagesContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  /* line 179, ../scss/design.scss */
+  .progressBarMessagesContainer {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* line 189, ../scss/design.scss */
+.instructions {
+  width: 100%;
+  font-size: 1.3em;
+  color: black;
+  margin-top: 1em;
+}
+
+/* line 196, ../scss/design.scss */
+.rule {
+  margin-top: 0.5em;
+}
+/* line 197, ../scss/design.scss */
+.rule .rule-number {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  background-color: #909090;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 100%;
+  font: bold 21px/32px sans-serif;
+  text-align: center;
+}
+
+/* line 212, ../scss/design.scss */
+.rulesList {
+  list-style: none;
+  padding-right: 0;
+}
+
+/* line 217, ../scss/design.scss */
+.disclaimer {
+  font-size: 0.5em;
+  font-color: #909090;
+  text-align: center;
 }

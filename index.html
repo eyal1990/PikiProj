@@ -6,86 +6,132 @@
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="stylesheets/design.css">
 </head>
-<body ng-app="piki">
+<body ng-app="piki" dir="rtl">
 
 <div ng-controller="questionCtrl as question">
     <section ng-show="question.number === 1">
         <img src="images/Desert.jpg" alt="first image"/>
 
-        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
-        <div class="contentBody">
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+        <div class="allExceptImage">
+            <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
 
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+            <div class="contentBody">
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
 
-            <p>impsum Lorem impsum Lorem impsum</p>
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+            </div>
+
+            <div class="contentQuestion">
+                <span class="questionTitle">שאלה 1:</span> <span class="questionBody">האם אתה בטוח?</span>
+                <input class="button" type="button" value="כן" ng-click="question.nextQuestion()"/>
+                <input class="button" type="button" value="לא" ng-click="question.nextQuestion()"/>
+            </div>
         </div>
-
-        <div ng-controller="listCtrl as list">
-            <progressbar ng-model="percentages"></progressbar>
-
-            <ul class="vi-list">
-                <li ng-show="percentages > 25" class="sample-show-hide">aaaaa</li>
-                <li ng-show="percentages > 50" class="sample-show-hide">bbbbb</li>
-                <li ng-show="percentages > 75" class="sample-show-hide">cccccc</li>
-                <li ng-show="percentages > 99" class="sample-show-hide">dddddd</li>
-            </ul>
-        </div>
-
-        <div class="contentQuestion"><span class="questionTitle">Question 1:</span> <span class="questionBody">Are you sure?</span>
-            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
-            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
     </section>
     <section ng-show="question.number === 2">
-        <img src="images/smush-Koala.jpg" alt="second image"/>
+        <img src="images/Koala.jpg" alt="second image"/>
 
-        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
-        <div class="contentBody">
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+        <div class="allExceptImage">
+            <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
 
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+            <div class="contentBody">
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
 
-            <p>impsum Lorem impsum Lorem impsum</p>
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+            </div>
+
+            <div class="contentQuestion">
+                <span class="questionTitle">שאלה 2:</span> <span class="questionBody">האם אתה בטוח?</span>
+                <input class="button" type="button" value="כן" ng-click="question.nextQuestion()"/>
+                <input class="button" type="button" value="לא" ng-click="question.nextQuestion()"/>
+            </div>
         </div>
-
-        <div class="contentQuestion"><span class="questionTitle">Question 2:</span> <span class="questionBody">Are you sure?</span>
-            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
-            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
     </section>
     <section ng-show="question.number === 3">
-        <img src="images/smush-Penguins.jpg" alt="third image"/>
+        <img src="images/Penguins.jpg" alt="third image"/>
 
-        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
-        <div class="contentBody">
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+        <div class="allExceptImage">
+            <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
 
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+            <div class="contentBody">
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
 
-            <p>impsum Lorem impsum Lorem impsum</p>
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+            </div>
+
+            <div class="contentQuestion">
+                <span class="questionTitle">שאלה 3:</span> <span class="questionBody">האם אתה בטוח?</span>
+                <input class="button" type="button" value="כן" ng-click="question.nextQuestion()"/>
+                <input class="button" type="button" value="לא" ng-click="question.nextQuestion()"/>
+            </div>
         </div>
-
-        <div class="contentQuestion"><span class="questionTitle">Question 3:</span> <span class="questionBody">Are you sure?</span>
-            <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
-            <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
     </section>
     <section ng-show="question.number === 4">
-        <img src="images/smush-Tulips.jpg" alt="fourth image"/>
+        <img src="images/Tulips.jpg" alt="fourth image"/>
 
-        <h1>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</h1>
-        <div class="contentBody">
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p>
+        <div class="allExceptImage">
+            <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
 
-            <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem impsum Lorem</p>
+            <div class="contentBody">
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
 
-            <p>impsum Lorem impsum Lorem impsum</p>
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+            </div>
+
+            <div class="listContainer" ng-controller="listCtrl as list">
+
+
+                <div class="progressBarMessagesContainer">
+                    <span class="progressBarMessage" ng-show="percentages < 25"> מחשב את התוצאות</span>
+                    <span class="progressBarMessage" ng-show="percentages >= 25 && percentages < 50"> הודעה כזאת או אחרת</span>
+                    <span class="progressBarMessage" ng-show="percentages >= 50 && percentages < 75"> עוד הודעה</span>
+                    <span class="progressBarMessage" ng-show="percentages >= 75 && percentages < 100"> רגע לפני הסוף</span>
+                    <span class="progressBarMessage" ng-show="percentages > 99"> כל הכבוד! אתה יכול להכנס לאתר! </span>
+                </div>
+                    <progressbar ng-model="percentages"></progressbar>
+
+
+                <ul class="vi-list">
+                    <li ng-show="percentages > 25" class="sample-show-hide vi-item">בודק אותך במסד הנתונים</li>
+                    <li ng-show="percentages > 50" class="sample-show-hide vi-item">בהתאם לתשובות שלך, אתה בסדר</li>
+                    <li ng-show="percentages > 75" class="sample-show-hide vi-item">אתה יכול להירשם לאתר</li>
+                    <li ng-show="percentages > 99" class="sample-show-hide vi-item">בבקשה תקרא את 3 החוקים הבאים:</li>
+                </ul>
+
+                <div ng-show="percentages > 99">
+                    <h1 class="instructions">לפני שאתה נרשם אתה חייב להסכים לחוקים הבאים:</h1>
+                    <ul class="rulesList">
+                        <li class="rule"><span class="rule-number">1</span>
+
+                            <span>זהו החוק הראשון. לא יהיה לך אלוהים אחרים</span>
+                        </li>
+                        <li class="rule"><span class="rule-number">2</span>
+
+                            <span>זהו החוק השני. משהו חשוב מאוד.</span>
+                        </li>
+                        <li class="rule"><span class="rule-number">3</span>
+
+                            <span>החוק השלישי כולל משהו אישי</span>
+                        </li>
+                    </ul>
+                    <p class="disclaimer">כל מה שאתה עושה באתר הזה הוא על אחריותך הבלעדית. אנחנו לא לוקחים אפילו מעט אחריות. גם לא מה שהיית חושב.</p>
+
+                    <a href="http://www.google.com"><input class="button" type="button" value="אני מסכים"/></a>
+                </div>
+            </div>
         </div>
-
-        <div class="contentQuestion"><span class="questionTitle">Question 4:</span> <span class="questionBody">Are you sure?</span>
-            <a href="http://www.google.com"><input class="button" type="button" value="Yes"/></a>
-            <a href="http://www.google.com"><input class="button" type="button" value="No"/></a></div>
     </section>
 </div>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.min.js"></script>‏
     <script src="js/piki.js"></script>
 </body>
 </html>

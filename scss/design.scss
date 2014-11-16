@@ -1,5 +1,5 @@
 @import "breakpoint";
-$wide-screen: 1030px;
+$wide-screen: 1024px;
 $tablet-screen: 768px;
 
 html{
@@ -43,6 +43,12 @@ $paddingLeftFromImage: 0.8em;
       font-size:1.7em;
       font-weight: 500;
 
+    @include breakpoint($wide-screen) {
+      float: left;
+      width: 100%;
+      padding-left:0;
+    }
+
   }
 
   .contentBody{
@@ -51,11 +57,11 @@ $paddingLeftFromImage: 0.8em;
     margin-top: 1em;
     font-size:1.2em;
 
-    @include breakpoint($tablet-screen){
-      width: calc(50% - #{$paddingLeftFromImage});
-      padding-left:$paddingLeftFromImage;
-      margin: 0;
-    }
+//    @include breakpoint($tablet-screen){
+//      width: calc(50% - #{$paddingLeftFromImage});
+//      padding-left:$paddingLeftFromImage;
+//      margin: 0;
+//    }
   }
 
   .contentQuestion{
@@ -64,12 +70,12 @@ $paddingLeftFromImage: 0.8em;
 
     @include breakpoint($wide-screen) {
       float:left;
-      width:50%;
-      //    width: calc(50% - 1.3em);
-      //    padding-left:1.3em;
-      margin-left:25%;
-      margin-right:25%;
-      margin-top:1em;
+//      width:inherit;
+          width: 100%;
+          padding-left:0;
+//      margin-left:25%;
+//      margin-right:25%;
+//      margin-top:1em;
     }
   }
 }
@@ -83,6 +89,14 @@ $paddingLeftFromImage: 0.8em;
   font-size:1.3em;
 }
 
+.allExceptImage{
+  @include breakpoint($wide-screen){
+    float:right;
+    width: calc(50% - 1.3em);
+    padding-left:1.3em;
+  }
+}
+
 .button{
   width:100%;
   font-size: 1.8em;
@@ -92,6 +106,8 @@ $paddingLeftFromImage: 0.8em;
   margin-top: 0.3em;
   margin-bottom:0.3em;
   cursor: pointer;
+  border-radius: 10px;
+  outline: none;
 
   background: #adadad; /* Old browsers */
   background: -moz-linear-gradient(top,  #adadad 0%, #818181 50%, #adadad 100%); /* FF3.6+ */
@@ -129,12 +145,9 @@ $paddingLeftFromImage: 0.8em;
   border-radius: 10px;
 }
 
-.vi-list {
-  list-style-image: url('../images/v.png');
-}
-
-li {
-  margin-bottom: 4px;
+.listContainer{
+  width:100%;
+  float:left;
 }
 
 .sample-show-hide {
@@ -144,4 +157,65 @@ li {
 
 .sample-show-hide.ng-hide {
   opacity:0;
+}
+
+.vi-list {
+  list-style-image: url('../images/checkmark.png');
+}
+
+.vi-item{
+//  background: url(../images/checkmark.png) 0 center no-repeat;
+  color: #636363;
+  margin-bottom: 4px;
+}
+
+.progressBarMessage{
+  font-size: 1.5em;
+  color: #bf0000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.progressBarMessagesContainer{
+  margin-left: auto;
+  margin-right:auto;
+
+  @include breakpoint($tablet-screen){
+    width:100%;
+    margin:0;
+  }
+}
+
+.instructions{
+  width: 100%;
+  font-size:1.3em;
+  color:black;
+  margin-top:1em;
+}
+
+.rule {
+  .rule-number {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    background-color: #909090;
+    border: 1px solid #fff;
+    display: inline-block;
+    border-radius: 100%;
+    font: bold 21px/32px sans-serif;
+    text-align: center;
+  }
+
+  margin-top: 0.5em;
+}
+
+.rulesList{
+  list-style:none;
+  padding-right: 0;
+}
+
+.disclaimer{
+  font-size:0.5em;
+  font-color: #909090;
+  text-align:center;
 }
