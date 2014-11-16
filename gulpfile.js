@@ -36,6 +36,11 @@ gulp.task('scripts-prod', function() {
     .pipe(gulp.dest('dest/js/'));
 });
 
+gulp.task('templates-prod', function() {
+    return gulp.src('templates/*.html')
+        .pipe(gulp.dest('dest/templates/'));
+})
+
 gulp.task('images', function() {
   return gulp.src('images/**/*')
     .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
@@ -93,6 +98,6 @@ gulp.task('watch', function() {
 });
 
 gulp.task('prod', function() {
-    runSequence('clean', ['styles-prod','scripts-prod', 'images-prod', 'replace'], 'delete-css-map');
+    runSequence('clean', ['styles-prod', 'scripts-prod', 'templates-prod', 'images-prod', 'replace'], 'delete-css-map');
     return gulp.src('/').pipe(notify({ message: 'Prod task complete' }));
 });
