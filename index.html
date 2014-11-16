@@ -114,20 +114,20 @@
                     <span class="progressBarMessage" ng-show="percentages < 25"> מחשב את התוצאות</span>
                     <span class="progressBarMessage" ng-show="percentages >= 25 && percentages < 50"> הודעה כזאת או אחרת</span>
                     <span class="progressBarMessage" ng-show="percentages >= 50 && percentages < 75"> עוד הודעה</span>
-                    <span class="progressBarMessage" ng-show="percentages >= 75 && percentages < 100"> רגע לפני הסוף</span>
-                    <span class="progressBarMessage" ng-show="percentages > 99"> כל הכבוד! אתה יכול להכנס לאתר! </span>
+                    <span class="progressBarMessage" ng-show="percentages >= 75 && percentages < 99"> רגע לפני הסוף</span>
+                    <span class="progressBarMessage" ng-show="percentages > 98"> כל הכבוד! אתה יכול להכנס לאתר! </span>
                 </div>
-                    <progressbar ng-model="percentages"></progressbar>
+                    <progressbar percentages="percentages" done="list.scrollDown()"></progressbar>
 
 
                 <ul class="vi-list">
                     <li ng-show="percentages > 25" class="sample-show-hide vi-item">בודק אותך במסד הנתונים</li>
                     <li ng-show="percentages > 50" class="sample-show-hide vi-item">בהתאם לתשובות שלך, אתה בסדר</li>
                     <li ng-show="percentages > 75" class="sample-show-hide vi-item">אתה יכול להירשם לאתר</li>
-                    <li ng-show="percentages > 99" class="sample-show-hide vi-item">בבקשה תקרא את 3 החוקים הבאים:</li>
+                    <li ng-show="percentages > 90" class="sample-show-hide vi-item">בבקשה תקרא את 3 החוקים הבאים:</li>
                 </ul>
 
-                <div ng-show="percentages > 99">
+                <div ng-show="percentages > 98">
                     <h1 class="instructions">לפני שאתה נרשם אתה חייב להסכים לחוקים הבאים:</h1>
                     <ul class="rulesList">
                         <li class="rule"><span class="rule-number">1</span>
@@ -145,7 +145,7 @@
                     </ul>
                     <p class="disclaimer">כל מה שאתה עושה באתר הזה הוא על אחריותך הבלעדית. אנחנו לא לוקחים אפילו מעט אחריות. גם לא מה שהיית חושב.</p>
 
-                    <a href="http://www.google.com"><input class="button" type="button" value="אני מסכים"/></a>
+                    <a href="http://www.google.com"><input id="bottom" class="button" type="button" value="אני מסכים"/></a>
                 </div>
             </div>
         </div>

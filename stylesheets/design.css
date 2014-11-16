@@ -1,9 +1,9 @@
-/* line 5, ../scss/design.scss */
+/* line 6, ../scss/design.scss */
 html {
   background-color: #dfdfdf;
 }
 
-/* line 8, ../scss/design.scss */
+/* line 9, ../scss/design.scss */
 body {
   width: 80%;
   margin-left: auto;
@@ -11,24 +11,24 @@ body {
   font-size: 10px;
 }
 @media (min-width: 768px) {
-  /* line 8, ../scss/design.scss */
+  /* line 9, ../scss/design.scss */
   body {
     font-size: 17px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 8, ../scss/design.scss */
+  /* line 9, ../scss/design.scss */
   body {
     font-size: 20px;
   }
 }
 
-/* line 23, ../scss/design.scss */
+/* line 24, ../scss/design.scss */
 section img {
   width: 50%;
   float: left;
 }
-/* line 37, ../scss/design.scss */
+/* line 38, ../scss/design.scss */
 section h1 {
   width: calc(50% - 0.8em);
   padding-left: 0.8em;
@@ -39,27 +39,27 @@ section h1 {
   font-weight: 500;
 }
 @media (min-width: 1024px) {
-  /* line 37, ../scss/design.scss */
+  /* line 38, ../scss/design.scss */
   section h1 {
     float: left;
     width: 100%;
     padding-left: 0;
   }
 }
-/* line 54, ../scss/design.scss */
+/* line 55, ../scss/design.scss */
 section .contentBody {
   width: 100%;
   float: right;
   margin-top: 1em;
   font-size: 1.2em;
 }
-/* line 67, ../scss/design.scss */
+/* line 68, ../scss/design.scss */
 section .contentQuestion {
   width: 100%;
   float: left;
 }
 @media (min-width: 1024px) {
-  /* line 67, ../scss/design.scss */
+  /* line 68, ../scss/design.scss */
   section .contentQuestion {
     float: left;
     width: 100%;
@@ -67,19 +67,19 @@ section .contentQuestion {
   }
 }
 
-/* line 83, ../scss/design.scss */
+/* line 84, ../scss/design.scss */
 .questionTitle {
   font-size: 1.5em;
   color: #b10014;
 }
 
-/* line 88, ../scss/design.scss */
+/* line 89, ../scss/design.scss */
 .questionBody {
   font-size: 1.3em;
 }
 
 @media (min-width: 1024px) {
-  /* line 92, ../scss/design.scss */
+  /* line 93, ../scss/design.scss */
   .allExceptImage {
     float: right;
     width: calc(50% - 1.3em);
@@ -87,7 +87,7 @@ section .contentQuestion {
   }
 }
 
-/* line 100, ../scss/design.scss */
+/* line 101, ../scss/design.scss */
 .button {
   width: 100%;
   font-size: 1.8em;
@@ -116,7 +116,7 @@ section .contentQuestion {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#adadad',GradientType=0 );
   /* IE6-9 */
 }
-/* line 121, ../scss/design.scss */
+/* line 122, ../scss/design.scss */
 .button:hover {
   background: #269800;
   /* Old browsers */
@@ -136,7 +136,7 @@ section .contentQuestion {
   /* IE6-9 */
 }
 
-/* line 133, ../scss/design.scss */
+/* line 134, ../scss/design.scss */
 #outer {
   width: 70%;
   border: 2px solid black;
@@ -144,44 +144,43 @@ section .contentQuestion {
   border-radius: 10px;
 }
 
-/* line 140, ../scss/design.scss */
+/* line 141, ../scss/design.scss */
 #inner {
-  transition: width 1s ease;
-  width: 0%;
+  width: 0;
   background-color: #23F018;
   height: 100%;
   border-radius: 10px;
 }
 
-/* line 148, ../scss/design.scss */
+/* line 149, ../scss/design.scss */
 .listContainer {
   width: 100%;
   float: left;
 }
 
-/* line 153, ../scss/design.scss */
+/* line 154, ../scss/design.scss */
 .sample-show-hide {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
 
-/* line 158, ../scss/design.scss */
+/* line 159, ../scss/design.scss */
 .sample-show-hide.ng-hide {
   opacity: 0;
 }
 
-/* line 162, ../scss/design.scss */
+/* line 163, ../scss/design.scss */
 .vi-list {
   list-style-image: url("../images/checkmark.png");
 }
 
-/* line 166, ../scss/design.scss */
+/* line 167, ../scss/design.scss */
 .vi-item {
   color: #636363;
   margin-bottom: 4px;
 }
 
-/* line 172, ../scss/design.scss */
+/* line 173, ../scss/design.scss */
 .progressBarMessage {
   font-size: 1.5em;
   color: #bf0000;
@@ -189,20 +188,20 @@ section .contentQuestion {
   margin-bottom: 10px;
 }
 
-/* line 179, ../scss/design.scss */
+/* line 180, ../scss/design.scss */
 .progressBarMessagesContainer {
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 768px) {
-  /* line 179, ../scss/design.scss */
+  /* line 180, ../scss/design.scss */
   .progressBarMessagesContainer {
     width: 100%;
     margin: 0;
   }
 }
 
-/* line 189, ../scss/design.scss */
+/* line 190, ../scss/design.scss */
 .instructions {
   width: 100%;
   font-size: 1.3em;
@@ -210,11 +209,11 @@ section .contentQuestion {
   margin-top: 1em;
 }
 
-/* line 196, ../scss/design.scss */
+/* line 197, ../scss/design.scss */
 .rule {
   margin-top: 0.5em;
 }
-/* line 197, ../scss/design.scss */
+/* line 198, ../scss/design.scss */
 .rule .rule-number {
   width: 32px;
   height: 32px;
@@ -227,15 +226,15 @@ section .contentQuestion {
   text-align: center;
 }
 
-/* line 212, ../scss/design.scss */
+/* line 213, ../scss/design.scss */
 .rulesList {
   list-style: none;
   padding-right: 0;
 }
 
-/* line 217, ../scss/design.scss */
+/* line 218, ../scss/design.scss */
 .disclaimer {
   font-size: 0.5em;
-  font-color: #909090;
+  color: #909090;
   text-align: center;
 }
