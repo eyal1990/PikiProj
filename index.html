@@ -9,8 +9,8 @@
 <body ng-app="piki" dir="rtl">
 
 <div ng-controller="questionCtrl as question">
-    <section ng-show="question.number === 1">
-        <img src="images/Desert.jpg" alt="first image"/>
+    <section ng-if="question.number === 1">
+        <img src="images/Desert.jpg" alt="תמונה ראשונה"/>
 
         <div class="allExceptImage">
             <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
@@ -20,7 +20,7 @@
 
                 <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
 
-                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו <timer interval="90"></timer> </p>
             </div>
 
             <div class="contentQuestion">
@@ -30,8 +30,8 @@
             </div>
         </div>
     </section>
-    <section ng-show="question.number === 2">
-        <img src="images/Koala.jpg" alt="second image"/>
+    <section ng-if="question.number === 2">
+        <img src="images/Koala.jpg" alt="תמונה שנייה"/>
 
         <div class="allExceptImage">
             <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
@@ -41,7 +41,7 @@
 
                 <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
 
-                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו <timer interval="90"></timer> </p>
             </div>
 
             <div class="contentQuestion">
@@ -51,8 +51,8 @@
             </div>
         </div>
     </section>
-    <section ng-show="question.number === 3">
-        <img src="images/Penguins.jpg" alt="third image"/>
+    <section ng-if="question.number === 3">
+        <img src="images/Tulips.jpg" alt="תמונה שלישית"/>
 
         <div class="allExceptImage">
             <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
@@ -62,7 +62,7 @@
 
                 <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
 
-                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו <timer interval="90"></timer> </p>
             </div>
 
             <div class="contentQuestion">
@@ -72,7 +72,28 @@
             </div>
         </div>
     </section>
-    <section ng-show="question.number === 4">
+    <section ng-if="question.number === 4">
+        <img src="images/Penguins.jpg" alt="תמונה רביעית"/>
+
+        <div class="allExceptImage">
+            <h1>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</h1>
+
+            <div class="contentBody">
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו טקסט כלשהו</p>
+
+                <p>טקסט כלשהו טקסט כלשהו טקסט כלשהו <timer interval="90"></timer> </p>
+            </div>
+
+            <div class="contentQuestion">
+                <span class="questionTitle">שאלה 4:</span> <span class="questionBody">האם אתה בטוח?</span>
+                <input class="button" type="button" value="כן" ng-click="question.nextQuestion()"/>
+                <input class="button" type="button" value="לא" ng-click="question.nextQuestion()"/>
+            </div>
+        </div>
+    </section>
+    <section ng-if="question.number === 5">
         <img src="images/Tulips.jpg" alt="fourth image"/>
 
         <div class="allExceptImage">
