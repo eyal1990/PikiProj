@@ -21,6 +21,17 @@
             <p>impsum Lorem impsum Lorem impsum</p>
         </div>
 
+        <div ng-controller="listCtrl as list">
+            <progressbar ng-model="percentages"></progressbar>
+
+            <ul class="vi-list">
+                <li ng-show="percentages > 25" class="sample-show-hide">aaaaa</li>
+                <li ng-show="percentages > 50" class="sample-show-hide">bbbbb</li>
+                <li ng-show="percentages > 75" class="sample-show-hide">cccccc</li>
+                <li ng-show="percentages > 99" class="sample-show-hide">dddddd</li>
+            </ul>
+        </div>
+
         <div class="contentQuestion"><span class="questionTitle">Question 1:</span> <span class="questionBody">Are you sure?</span>
             <input class="button" type="button" value="Yes" ng-click="question.nextQuestion()"/>
             <input class="button" type="button" value="No" ng-click="question.nextQuestion()"/></div>
