@@ -85,3 +85,35 @@ h1{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#269800', endColorstr='#269800',GradientType=0 ); /* IE6-9 */
   }
 }
+
+#outer {
+  width: 70%;
+  border: 2px solid black;
+  height: 20px;
+  border-radius: 10px;
+}
+
+#inner {
+  transition: width 1s ease;
+  width: 0%;
+  background-color: #23F018;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.vi-list {
+  list-style-image: url('../images/v.png');
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.sample-show-hide {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.sample-show-hide.ng-hide {
+  opacity:0;
+}
