@@ -13,13 +13,19 @@ var livereload = require('gulp-livereload');
 var del = require('del');
 var htmlreplace = require('gulp-html-replace');
 var runSequence = require('run-sequence');
+var scp = require('scp2');
+var guloscp2 = require('gulp-scp2');
+//var rsync = require('rsyncwrapper').rsync;
+//var gutil = require('gulp-util');
+var shell = require('gulp-shell');
+var run = require('gulp-run');
 
 gulp.task('styles-prod', function() {
   return gulp.src('scss/design.scss')
     .pipe(sass({ compass: true, style: 'expanded' }))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('dest/css'));
+    .pipe(gulp.dest('dest/PikiProj/css'));
 });
 
 gulp.task('styles', function () {
@@ -33,12 +39,12 @@ gulp.task('scripts-prod', function() {
     .pipe(concat('main.js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dest/js/'));
+    .pipe(gulp.dest('dest/PikiProj/js/'));
 });
 
 gulp.task('templates-prod', function() {
     return gulp.src('templates/*.html')
-        .pipe(gulp.dest('dest/templates/'));
+        .pipe(gulp.dest('dest/PikiProj/templates/'));
 })
 
 gulp.task('images', function() {
@@ -50,7 +56,7 @@ gulp.task('images', function() {
 gulp.task('images-prod', function() {
   return gulp.src('images/**/*')
       .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
-      .pipe(gulp.dest('dest/images/'));
+      .pipe(gulp.dest('dest/PikiProj/images/'));
 });
 
 gulp.task('clean', function(cb) {
@@ -71,11 +77,11 @@ gulp.task('replace', function() {
         ],
         "css": ['css/design.min.css']
       }))
-      .pipe(gulp.dest('dest/'));
+      .pipe(gulp.dest('dest/PikiProj/'));
 });
 
 gulp.task('delete-css-map', function(cb) {
-    del(['dest/css/*.map'], cb)
+    del(['dest/PikiProj/css/*.map'], cb)
 });
 
 gulp.task('watch', function() {
@@ -97,7 +103,15 @@ gulp.task('watch', function() {
 
 });
 
+gulp.task('copyToProd', function(){
+
+//    scp.scp('dest/', 'root:xucnxucxc@128.199.42.232:../var/www/PikiProj/', function(err) {
+//})
+
+    run('pscp -pw xucnxucxc -r C:/\Projects/\PikiProj/\dest/\* root@128.199.42.232:../var/www/').exec();
+});
+
 gulp.task('prod', function() {
-    runSequence('clean', ['styles-prod', 'scripts-prod', 'templates-prod', 'images-prod', 'replace'], 'delete-css-map');
+    runSequence('clean', ['styles-prod', 'scripts-prod', 'templates-prod', 'images-prod', 'replace'], 'delete-css-map', 'copyToProd');
     return gulp.src('/').pipe(notify({ message: 'Prod task complete' }));
 });
