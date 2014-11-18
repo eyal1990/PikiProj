@@ -4,7 +4,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var notify = require('gulp-notify');
@@ -13,12 +12,9 @@ var livereload = require('gulp-livereload');
 var del = require('del');
 var htmlreplace = require('gulp-html-replace');
 var runSequence = require('run-sequence');
-var scp = require('scp2');
-var guloscp2 = require('gulp-scp2');
-//var rsync = require('rsyncwrapper').rsync;
-//var gutil = require('gulp-util');
 var shell = require('gulp-shell');
 var run = require('gulp-run');
+var Imagemin = require('imagemin');
 
 gulp.task('styles-prod', function() {
   return gulp.src('scss/design.scss')
@@ -32,7 +28,7 @@ gulp.task('styles', function () {
   return gulp.src('scss/design.scss')
       .pipe(sass({ compass: true, style: 'expanded' }))
       .pipe(gulp.dest('css/'));
-})
+});
 
 gulp.task('scripts-prod', function() {
   return gulp.src('js/*.js')
@@ -45,18 +41,40 @@ gulp.task('scripts-prod', function() {
 gulp.task('templates-prod', function() {
     return gulp.src('templates/*.html')
         .pipe(gulp.dest('dest/PikiProj/templates/'));
-})
-
-gulp.task('images', function() {
-  return gulp.src('images/**/*')
-    .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('images/'));
 });
 
+var imageminForDev = new Imagemin()
+    .src('images/*.{gif,jpg,png,svg}')
+    .dest('images')
+    .use(Imagemin.jpegtran({ progressive: true }))
+.use(Imagemin.optipng({progressive: true}));
+
+gulp.task('images', function() {
+  imageminForDev.run(function (err, files) {
+        if (err) {
+            throw err;
+        }
+
+        console.log(files[0]);
+        // => { contents: <Buffer 89 50 4e ...> }
+    });
+});
+
+var imageminForProd = new Imagemin()
+    .src('images/*.{gif,jpg,png,svg}')
+    .dest('dest/PikiProj/images')
+    .use(Imagemin.jpegtran({ progressive: true }))
+.use(Imagemin.optipng({progressive: true}));
+
 gulp.task('images-prod', function() {
-  return gulp.src('images/**/*')
-      .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
-      .pipe(gulp.dest('dest/PikiProj/images/'));
+  imageminForProd.run(function (err, files) {
+        if (err) {
+            throw err;
+        }
+
+        console.log(files[0]);
+        // => { contents: <Buffer 89 50 4e ...> }
+    });
 });
 
 gulp.task('clean', function(cb) {
